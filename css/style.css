@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em,
+    0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* General */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+}
+
+section {
+  padding: 2em 2em;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  background-color: #303030;
+}
+
+.logo {
+  max-width: 100px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+.nav__links {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav__links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.nav__links li a {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #000;
+}
+
+/* Intro */
+
+.video-container {
+  display: grid;
+  width: max-content;
+  margin: 0 auto;
+  grid-column-gap: 5em;
+  grid-template-areas:
+    "title video"
+    "subitle video";
+}
+
+.video__title {
+  grid-area: title;
+  margin-top: 5em;
+}
+
+.video__subtitle {
+  grid-area: subtitle;
+  margin-bottom: 5em;
+}
+
+.video {
+  grid-area: video;
+  height: 360px;
+  width: 480px;
+}
