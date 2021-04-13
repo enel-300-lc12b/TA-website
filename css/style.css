@@ -9,6 +9,8 @@
 :root {
   --ff-primary: "Source Sans Pro", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
+  --clr-primary: #008f70;
+  --clr-accent: #93a0ff;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -55,7 +57,6 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 15px;
-  background-color: #303030;
 }
 
 .logo {
@@ -85,10 +86,14 @@ nav {
 }
 
 .nav__links li a:hover {
-  color: #000;
+  color: var(--clr-accent);
 }
 
 /* Intro */
+
+body {
+  background-color: var(--clr-primary);
+}
 
 @media (min-width: 1000px) {
   .video-container {
@@ -143,3 +148,24 @@ nav {
 }
 
 /* Benefits */
+
+.benefits__container {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.benefits__img {
+  width: 50%;
+}
+
+/* Model */
+
+.model__container {
+  display: flex;
+}
+
+.model__img {
+  width: 50%;
+  margin: 0 2em;
+}
