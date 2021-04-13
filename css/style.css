@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -43,7 +45,7 @@ img {
 }
 
 section {
-  padding: 2em 2em;
+  padding: 5em 2em;
 }
 
 /* Header */
@@ -88,14 +90,16 @@ nav {
 
 /* Intro */
 
-.video-container {
-  display: grid;
-  width: max-content;
-  margin: 0 auto;
-  grid-column-gap: 5em;
-  grid-template-areas:
-    "title video"
-    "subitle video";
+@media (min-width: 1000px) {
+  .video-container {
+    display: grid;
+    margin: 0 auto;
+    grid-column-gap: 2em;
+    grid-template-areas:
+      "title video"
+      "subtitle video";
+    width: 1000px;
+  }
 }
 
 .video__title {
@@ -110,6 +114,32 @@ nav {
 
 .video {
   grid-area: video;
-  height: 360px;
-  width: 480px;
+  height: auto;
+  width: 100%;
 }
+
+/* Promo */
+
+.promo__container {
+  display: grid;
+  margin: 0 auto;
+  grid-column-gap: 2em;
+  grid-template-areas:
+    "img title"
+    "img subtitle";
+}
+
+.promo__title {
+  grid-area: title;
+}
+
+.promo__subtitle {
+  grid-area: subtitle;
+}
+
+.promo__img {
+  grid-area: img;
+  width: 100%;
+}
+
+/* Benefits */
