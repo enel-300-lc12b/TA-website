@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -12,9 +13,9 @@
   --clr-primary: #008f70;
   --clr-accent: #93a0ff;
 
-  --fs-h1: 3rem;
+  --fs-h1: 3.25rem;
   --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
+  --fs-h3: 1.5rem;
   --fs-body: 1rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em,
@@ -23,8 +24,8 @@
 
 @media (min-width: 800px) {
   :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h1: 3.25rem;
+    --fs-h2: 2.25rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -39,6 +40,7 @@ html {
 body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
+  background-color: var(--clr-primary);
   line-height: 1.5;
 }
 
@@ -48,6 +50,32 @@ img {
 
 section {
   padding: 5em 2em;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  color: var(--clr-accent);
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  color: #fff;
 }
 
 /* Header */
@@ -60,7 +88,7 @@ header {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 125px;
   cursor: pointer;
   margin-right: auto;
 }
@@ -82,6 +110,7 @@ nav {
 
 .nav__links li a {
   text-decoration: none;
+  color: #fff;
   transition: all 0.3s ease 0s;
 }
 
@@ -91,10 +120,6 @@ nav {
 
 /* Intro */
 
-body {
-  background-color: var(--clr-primary);
-}
-
 @media (min-width: 1000px) {
   .video-container {
     display: grid;
@@ -103,24 +128,25 @@ body {
     grid-template-areas:
       "title video"
       "subtitle video";
-    width: 1000px;
   }
 }
 
 .video__title {
   grid-area: title;
-  margin-top: 5em;
+  margin: auto;
 }
 
 .video__subtitle {
   grid-area: subtitle;
-  margin-bottom: 5em;
+  margin-bottom: 5rem;
+  color: #fff;
 }
 
 .video {
   grid-area: video;
   height: auto;
   width: 100%;
+  min-width: 480px;
 }
 
 /* Promo */
@@ -136,10 +162,14 @@ body {
 
 .promo__title {
   grid-area: title;
+  color: var(--clr-accent);
+  margin: 0;
 }
 
 .promo__subtitle {
   grid-area: subtitle;
+  font-size: larger;
+  margin-bottom: 250px;
 }
 
 .promo__img {
@@ -156,7 +186,11 @@ body {
 }
 
 .benefits__img {
-  width: 50%;
+  width: 100%;
+}
+
+.benefits__subtitle {
+  color: #fff;
 }
 
 /* Model */
@@ -167,5 +201,6 @@ body {
 
 .model__img {
   width: 50%;
+  height: auto;
   margin: 0 2em;
 }
