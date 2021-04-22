@@ -160,6 +160,10 @@ nav {
   min-width: 360px;
 }
 
+.promo_text p {
+  font-size: 1.25rem;
+}
+
 .promo_title {
   color: var(--clr-accent);
   margin-bottom: 1em;
@@ -189,7 +193,11 @@ nav {
 }
 
 .individual_benefit {
-  flex-basis: 33%;
+  flex-basis: 31%;
+}
+
+.individual_benefit p {
+  font-size: 1.25rem;
 }
 
 .benefits_subtitle {
@@ -217,14 +225,23 @@ nav {
   justify-content: space-evenly;
 }
 
+.design_img-container {
+  flex-basis: 45%;
+  min-width: 360px;
+}
+
 .design_text {
   flex-basis: 45%;
   min-width: 360px;
 }
 
-.design_img-container {
-  flex-basis: 45%;
-  min-width: 360px;
+.design_text p {
+  font-size: 1.25rem;
+}
+
+.design_title {
+  color: var(--clr-accent);
+  margin-bottom: 1em;
 }
 
 @media (max-width: 1000px) {
