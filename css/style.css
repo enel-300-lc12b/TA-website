@@ -90,7 +90,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(72, 72, 72, 0.99);
+  background-color: rgba(64, 64, 64, 0.99);
 }
 
 .logo {
