@@ -42,10 +42,12 @@ body {
   font-size: var(--fs-body);
   background-color: var(--clr-primary);
   line-height: 1.5;
+  margin-top: 100px;
 }
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 section {
@@ -82,13 +84,17 @@ p {
 
 header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(72, 72, 72, 0.99);
 }
 
 .logo {
-  max-width: 125px;
+  max-width: 100px;
   cursor: pointer;
   margin-right: auto;
 }
@@ -98,83 +104,81 @@ nav {
   text-align: right;
 }
 
-.nav__links {
+.nav_links {
   list-style: none;
   display: inline-block;
 }
 
-.nav__links li {
+.nav_links li {
   display: inline-block;
   margin-right: 30px;
 }
 
-.nav__links li a {
+.nav_links li a {
   text-decoration: none;
   color: #fff;
   transition: all 0.3s ease 0s;
 }
 
-.nav__links li a:hover {
+.nav_links li a:hover {
   color: var(--clr-accent);
 }
 
 /* Intro */
 
-@media (min-width: 1000px) {
-  .video-container {
-    display: grid;
-    margin: 0 auto;
-    grid-column-gap: 2em;
-    grid-template-areas:
-      "title video"
-      "subtitle video";
-  }
+.intro {
+  text-align: center;
 }
 
-.video__title {
-  grid-area: title;
-  margin: auto;
+.video_title {
+  margin-bottom: 1em;
 }
 
-.video__subtitle {
-  grid-area: subtitle;
-  margin-bottom: 5rem;
+.video_subtitle {
   color: #fff;
+  margin-bottom: 1em;
 }
 
 .video {
-  grid-area: video;
+  width: 75%;
+  max-width: 100%;
+  min-width: 240px;
   height: auto;
-  width: 100%;
-  min-width: 480px;
+  margin: 0 auto;
+  display: block;
 }
 
 /* Promo */
 
-.promo__container {
-  display: grid;
-  margin: 0 auto;
-  grid-column-gap: 2em;
-  grid-template-areas:
-    "img title"
-    "img subtitle";
+.promo_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.promo__title {
-  grid-area: title;
+.promo_text {
+  flex-basis: 45%;
+  min-width: 360px;
+}
+
+.promo_title {
   color: var(--clr-accent);
-  margin: 0;
+  margin-bottom: 1em;
 }
 
-.promo__subtitle {
-  grid-area: subtitle;
-  font-size: larger;
-  margin-bottom: 250px;
+.promo_img-container {
+  flex-basis: 45%;
+  min-width: 360px;
 }
 
-.promo__img {
-  grid-area: img;
-  width: 100%;
+@media (max-width: 1000px) {
+  .promo_container {
+    flex-direction: column;
+  }
+
+  .promo_img-container {
+    margin-top: 2em;
+  }
 }
 
 /* Benefits */
