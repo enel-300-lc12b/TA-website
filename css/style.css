@@ -183,18 +183,33 @@ nav {
 
 /* Benefits */
 
-.benefits__container {
+.benefits_container {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.benefits__img {
-  width: 100%;
+.individual_benefit {
+  flex-basis: 33%;
 }
 
-.benefits__subtitle {
+.benefits_subtitle {
   color: #fff;
+}
+
+.benefits_img {
+  min-width: 300px;
+}
+
+@media (max-width: 1000px) {
+  .benefits_container {
+    flex-direction: column;
+  }
+
+  .individual_benefit:not(:first-child) {
+    margin-top: 2em;
+  }
 }
 
 /* Model */
