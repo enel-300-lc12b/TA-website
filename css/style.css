@@ -153,7 +153,6 @@ nav {
 .promo_container {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
 .promo_text {
@@ -186,7 +185,6 @@ nav {
 .benefits_container {
   text-align: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -212,14 +210,29 @@ nav {
   }
 }
 
-/* Model */
+/* Design */
 
-.model__container {
+.design_container {
   display: flex;
+  justify-content: space-evenly;
 }
 
-.model__img {
-  width: 50%;
-  height: auto;
-  margin: 0 2em;
+.design_text {
+  flex-basis: 45%;
+  min-width: 360px;
+}
+
+.design_img-container {
+  flex-basis: 45%;
+  min-width: 360px;
+}
+
+@media (max-width: 1000px) {
+  .design_container {
+    flex-direction: column;
+  }
+
+  .design_text {
+    margin-top: 2em;
+  }
 }
