@@ -256,18 +256,13 @@ nav {
 
 /* About Page */
 
-.about h1 {
+.about-text h1 {
   text-align: center;
 }
 
-.about h2 {
+.about-text h2 {
   margin: 1em 0;
   color: var(--clr-accent);
-}
-
-.about h3 {
-  margin: 1em 0;
-  color: #fff;
 }
 
 .about__img {
@@ -275,25 +270,32 @@ nav {
   margin: 2rem auto;
 }
 
+.about-team__title {
+  margin: 1em 0;
+  color: var(--clr-accent);
+}
+
 .about-team {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .about-team__member {
   flex-basis: 50%;
-  margin: 0 auto;
 }
 
 .about-team__img {
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   margin: 0 auto;
 }
 
-.about-team h3 {
+.about-team__name {
   text-align: center;
+  margin: 1em 0 3em;
+  color: #fff;
 }
 
 /* Contact Form */
