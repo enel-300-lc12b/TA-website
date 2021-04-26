@@ -254,6 +254,12 @@ nav {
   }
 }
 
+/* About Page */
+
+.about {
+  text-align: center;
+}
+
 /* Contact Form */
 
 /* Style inputs with type="text", select elements and textareas */
@@ -302,5 +308,4 @@ input[type="submit"]:hover,
 
 .form_title {
   text-align: center;
-  padding: 1em 1em 0 1em;
 }
