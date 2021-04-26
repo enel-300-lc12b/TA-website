@@ -206,7 +206,8 @@ nav {
 }
 
 .benefits_img {
-  min-width: 300px;
+  max-width: 200px;
+  margin: 2rem auto;
 }
 
 @media (max-width: 1000px) {
@@ -306,15 +307,25 @@ nav {
   margin-bottom: 1em;
 }
 
-.sustainability-entry h2 {
+.sustainability-design {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.sustainability-design-entry {
+  flex-basis: 45%;
+}
+
+.sustainability-design-entry h2 {
   margin: 1em 0;
   color: var(--clr-accent);
 }
 
-.sustainability-entry__graphic {
-  max-width: 500px;
+.sustainability-design-entry__graphic {
+  max-width: 200px;
   height: auto;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 /* Contact Form */
