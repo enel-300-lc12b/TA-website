@@ -256,7 +256,43 @@ nav {
 
 /* About Page */
 
-.about {
+.about h1 {
+  text-align: center;
+}
+
+.about h2 {
+  margin: 1em 0;
+  color: var(--clr-accent);
+}
+
+.about h3 {
+  margin: 1em 0;
+  color: #fff;
+}
+
+.about__img {
+  max-width: 75%;
+  margin: 2rem auto;
+}
+
+.about-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.about-team__member {
+  flex-basis: 50%;
+  margin: 0 auto;
+}
+
+.about-team__img {
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about-team h3 {
   text-align: center;
 }
 
