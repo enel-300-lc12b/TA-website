@@ -283,11 +283,11 @@ nav {
 }
 
 .about-team__member {
-  flex-basis: 50%;
+  flex-basis: 25%;
 }
 
 .about-team__img {
-  max-width: 350px;
+  max-width: 300px;
   height: auto;
   margin: 0 auto;
 }
